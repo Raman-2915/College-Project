@@ -1,0 +1,127 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .gallery-item {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-item img,
+  .gallery-item video {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .modal-content img,
+  .modal-content video {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    border-radius: 10px;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <h1 style="margin-top: 70px">Photo & Video Gallery</h1>
+  <div class="gallery">
+    <% galleryItems.forEach(function(item) { %>
+    <div
+      class="gallery-item"
+      onclick="openModal('<%= item.type %>', '<%= item.src %>')"
+    >
+      <% if(item.type === 'image') { %>
+      <img src="<%= item.src %>" alt="Gallery Image" />
+      <% } else if(item.type === 'video') { %>
+      <video muted>
+        <source src="<%= item.src %>" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <% } %>
+    </div>
+    <% }); %>
+  </div>
+
+  <!-- Modal -->
+  <div id="mediaModal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script>
+    function openModal(type, src) {
+      const modal = document.getElementById("mediaModal");
+      const content = document.getElementById("modalContent");
+      modal.style.display = "flex";
+
+      if (type === "image") {
+        content.innerHTML = `<img src="${src}" alt="Full Image">`;
+      } else if (type === "video") {
+        content.innerHTML = `
+                    <video controls autoplay>
+                        <source src="${src}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>`;
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("mediaModal");
+      const content = document.getElementById("modalContent");
+      modal.style.display = "none";
+      content.innerHTML = "";
+    }
+  </script>
+</body>

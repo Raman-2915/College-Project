@@ -1,97 +1,142 @@
 <% layout("/layouts/boilerplate.ejs") -%>
 <style>
-  .space {
+  body {
+    background-color: #1a2a44;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
     margin-top: 70px;
   }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px auto;
+    max-width: 800px;
+  }
+  .section {
+    margin: 20px 0;
+  }
+  .media-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .media-item {
+    max-width: 400px;
+    margin: 10px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffffff;
+  }
+  video {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border: 2px solid #ffffff;
+  }
+  audio {
+    max-width: 100%;
+    margin: 10px 0;
+  }
 </style>
-<div class="space">
-  <h3><b>Bhai Sati Das Ji</b></h3>
-  <img
-    src="data:image/jpeg;base64,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"
-    alt=""
-  />
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-</div>
+<body>
+  <h1>Bhai Sati Das Ji</h1>
+  <h2>The Devoted Sikh Martyr</h2>
+
+  <div class="section">
+    <h2>Early Life</h2>
+    <p>
+      Bhai Sati Das Ji was born in the mid-17th century in Punjab, the younger
+      brother of Bhai Mati Das Ji. Raised in a pious Sikh family under the
+      influence of his father, Bhai Hira Nand, he embraced Sikh values from a
+      young age.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <img src="/media/satiDas.jpg" alt="Bhai Sati Das Young" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Family Life</h2>
+    <p>
+      Bhai Sati Das Ji shared a close bond with his brother Bhai Mati Das and
+      their family, which was a hub of Sikh devotion. His family supported his
+      spiritual journey and stood by him during his trials.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <img src="/media/satiDas.jpg" alt="Bhai Sati Das Family" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Contributions to Sikhi</h2>
+    <p>
+      Bhai Sati Das Ji contributed to Sikhi by living a life of faith and
+      service alongside Guru Tegh Bahadur Ji. His dedication helped reinforce
+      Sikh teachings during a period of persecution.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <video controls>
+          <source src="/media/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Martyrdom</h2>
+    <p>
+      In 1675, Bhai Sati Das Ji was arrested with Guru Tegh Bahadur Ji. He was
+      wrapped in cotton and burned alive in Delhi on November 24, 1675, for
+      refusing to convert to Islam. His martyrdom showcased unparalleled
+      devotion.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <img src="/media/satiDas.jpg" alt="Bhai Sati Das Martyrdom" />
+      </div>
+      <div class="media-item">
+        <video controls>
+          <source src="/media/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Legacy</h2>
+    <p>
+      Bhai Sati Das Ji's sacrifice continues to inspire Sikhs globally. His
+      story is a testament to courage and faith, commemorated in Sikh
+      traditions.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <audio controls>
+          <source src="/media/audio.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+</body>

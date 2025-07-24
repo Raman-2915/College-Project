@@ -1,97 +1,145 @@
 <% layout("/layouts/boilerplate.ejs") -%>
 <style>
-  .space {
+  body {
+    background-color: #1a2a44;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
     margin-top: 70px;
   }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px auto;
+    max-width: 800px;
+  }
+  .section {
+    margin: 20px 0;
+  }
+  .media-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .media-item {
+    max-width: 400px;
+    margin: 10px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffffff;
+  }
+  video {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border: 2px solid #ffffff;
+  }
+  audio {
+    max-width: 100%;
+    margin: 10px 0;
+  }
 </style>
-<div class="space">
-  <h3><b>Bhai Mati Das Ji</b></h3>
-  <img
-    src="https://www.sikhnet.com/files/styles/social-sharing/public/news/image/main/bhai_mati_das-thumb.jpg?itok=4kQVPQu4"
-    alt=""
-  />
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-</div>
+<body>
+  <h1>Bhai Mati Das Ji</h1>
+  <h2>The Exemplary Sikh Martyr</h2>
+
+  <div class="section">
+    <h2>Early Life</h2>
+    <p>
+      Bhai Mati Das Ji was born in the mid-17th century in a devout Sikh family
+      in Punjab. He was the elder brother of Bhai Sati Das Ji and grew up under
+      the spiritual guidance of his father, Bhai Hira Nand, a respected Sikh.
+      His early life was marked by a deep commitment to Sikh principles and
+      service.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <img src="/media/matiDas.jpg" alt="Bhai Mati Das Young" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Family Life</h2>
+    <p>
+      Bhai Mati Das Ji was married and had a family, including his brother Bhai
+      Sati Das. His household was a center of Sikh values, where he instilled
+      courage and devotion in his loved ones. His wife and family supported his
+      mission alongside Guru Tegh Bahadur Ji.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <img src="/media/matiDas.jpg" alt="Bhai Mati Das Family" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Contributions to Sikhi</h2>
+    <p>
+      Bhai Mati Das Ji was a skilled preacher and a close companion of Guru Tegh
+      Bahadur Ji. He played a key role in spreading Sikh teachings, emphasizing
+      equality, justice, and devotion. His efforts strengthened the Sikh
+      community during challenging times under Mughal rule.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <video controls>
+          <source src="/media/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Martyrdom</h2>
+    <p>
+      In 1675, Bhai Mati Das Ji was arrested with Guru Tegh Bahadur Ji in Delhi.
+      Refusing to convert to Islam, he was brutally sawed alive in public. His
+      martyrdom on November 24, 1675, inspired countless Sikhs and remains a
+      symbol of ultimate sacrifice for faith.
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <img src="/media/matiDas.jpg" alt="Bhai Mati Das Martyrdom" />
+      </div>
+      <div class="media-item">
+        <video controls>
+          <source src="/media/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Legacy</h2>
+    <p>
+      Bhai Mati Das Ji's life and death continue to inspire Sikhs worldwide. His
+      courage is commemorated in Sikh history and Gurbani. Listen to a
+      recitation in his honor:
+    </p>
+    <div class="media-container">
+      <div class="media-item">
+        <audio controls>
+          <source src="/media/audio.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+</body>

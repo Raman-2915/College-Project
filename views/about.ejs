@@ -1,97 +1,155 @@
 <% layout("/layouts/boilerplate.ejs") -%>
-<style>
-  .space {
-    margin-top: 70px;
-  }
-</style>
-<div class="space">
-  <h3><b>Guru Tegh Bahadur ji</b></h3>
-  <img
-    src="data:image/jpeg;base64,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"
-    alt=""
-  />
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, laudantium!
-    Quam vero aspernatur expedita velit hic ratione quae molestiae harum
-    necessitatibus beatae numquam sit iusto sunt distinctio, maiores omnis
-    quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-    neque cumque repellendus asperiores, voluptas, eaque porro, vero blanditiis
-    et fugiat hic iusto quia quisquam omnis quaerat consequuntur. Deleniti,
-    explicabo totam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Quos maxime fugiat tempore, omnis ea maiores quam, dolor voluptas, iure eos
-    fuga rerum sapiente itaque pariatur autem? Quibusdam quidem eum
-    exercitationem!
-  </p>
-</div>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e7eb;
+            margin-top: 70px;
+        }
+        .section-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f3f4f6;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .media-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        a:hover {
+            color: #facc15;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+    <!-- Hero Section -->
+    <header class="bg-gray-800 text-gray-200 py-16 text-center">
+        <div class="section-container">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Sri Guru Tegh Bahadur Ji</h1>
+            <p class="text-lg md:text-xl">The Ninth Sikh Guru, Protector of Humanity (Hind Di Chadar)</p>
+            <div class="media-container">
+                <!-- Placeholder for Guru Tegh Bahadur Ji's image -->
+                <img src="/media/guruTeghBahadur.jpg" alt="Guru Tegh Bahadur Ji Portrait" class="w-full max-w-md rounded-lg shadow-lg">
+            </div>
+        </div>
+    </header>
+
+    <!-- Biography Section -->
+    <section id="biography" class="py-12 bg-gray-900">
+        <div class="section-container">
+            <h2 class="section-heading">Biography</h2>
+            <p class="text-lg mb-4">
+                Guru Tegh Bahadur Ji, born Tyag Mal on April 1, 1621, in Amritsar, Punjab, was the ninth Sikh Guru (1664–1675) and the youngest son of Guru Hargobind Ji, the sixth Sikh Guru. Renamed Tegh Bahadur ("Brave Sword") after displaying valor in the Battle of Kartarpur (1635), he was a warrior, poet, philosopher, and spiritual leader. He was married to Mata Gujri Ji, and their son, Guru Gobind Singh Ji, became the tenth Sikh Guru. Guru Tegh Bahadur Ji founded Anandpur Sahib and traveled extensively across India, spreading the teachings of Guru Nanak.
+            </p>
+            <p class="text-lg mb-4">
+                His life was marked by his commitment to Sikh principles, establishing community projects like water wells and langars (community kitchens). He was ordained as Guru on April 16, 1664, after being identified by Bhai Makhan Shah as the true successor amidst 22 claimants in Bakala.
+            </p>
+            <div class="media-container">
+                <!-- Placeholder for an image of Anandpur Sahib -->
+                <img src="/media/guruTeghBahadur.jpg" alt="Anandpur Sahib" class="w-full max-w-md rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachings Section -->
+    <section id="teachings" class="py-12 bg-gray-800">
+        <div class="section-container">
+            <h2 class="section-heading">Teachings</h2>
+            <p class="text-lg mb-4">
+                Guru Tegh Bahadur Ji’s teachings emphasize liberation from attachment, fear, and dependence, advocating strength through truth, worship, sacrifice, and knowledge. His 116 shabads and 15 ragas in the Guru Granth Sahib cover themes like the nature of God, human attachments, sorrow, dignity, service, and deliverance. Notable teachings include:
+            </p>
+            <ul class="list-disc list-inside text-lg mb-4">
+                <li>"O mother, I have been blessed with the wealth of God’s Name."</li>
+                <li>"True realization of the actual nature of this material world, its perishable, transitory and illusory aspects best dawns on a person in suffering."</li>
+                <li>"Fear not and frighten not." – A message of courage and compassion.
+            </ul>
+            <p class="text-lg mb-4">
+                His teachings promote religious tolerance, equality, and indifference to both misery and happiness in pursuit of the Almighty.
+            </p>
+            <div class="media-container">
+                <!-- Placeholder for an image of Guru Granth Sahib -->
+                <img src="/media/guruTeghBahadur.jpg" alt="Guru Granth Sahib" class="w-full max-w-md rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Martyrdom Section -->
+    <section id="martyrdom" class="py-12 bg-gray-900">
+        <div class="section-container">
+            <h2 class="section-heading">Martyrdom</h2>
+            <p class="text-lg mb-4">
+                Guru Tegh Bahadur Ji’s martyrdom in 1675 is a defining moment in Sikh history. During Mughal Emperor Aurangzeb’s reign, forced conversions to Islam were rampant. When Kashmiri Pandits sought his help, Guru Ji challenged Aurangzeb, stating that if he could convert the Guru, others would follow. Refusing to convert or perform miracles, he and his companions—Bhai Mati Das, Bhai Sati Das, and Bhai Dayala—were tortured and executed in Delhi’s Chandni Chowk. Guru Ji was beheaded on November 11, 1675, earning the title "Hind Di Chadar" (Shield of India) for protecting religious freedom.
+            </p>
+            <p class="text-lg mb-4">
+                His martyrdom inspired the Sikh community, strengthening their resolve against oppression and making human rights central to Sikh identity. Gurdwara Sis Ganj Sahib marks the execution site, and Gurdwara Rakab Ganj Sahib marks the cremation site.
+            </p>
+            <div class="media-container">
+                <!-- Placeholder for a video clip of Guru Tegh Bahadur Ji’s martyrdom story -->
+                <video controls class="w-full max-w-md rounded-lg shadow-lg">
+                    <source src="/media/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Section -->
+    <section id="lifestyle" class="py-12 bg-gray-800">
+        <div class="section-container">
+            <h2 class="section-heading">Lifestyle</h2>
+            <p class="text-lg mb-4">
+                Despite maintaining the royal trappings of a Guru, including armed attendants, Guru Tegh Bahadur Ji lived an austere and meditative life. He spent long hours in meditation, reflecting his ascetic nature, and avoided conflict when possible, yet remained a skilled warrior trained in swordsmanship and horsemanship. He traveled extensively to spread Sikh teachings, visiting places like Dhaka, Assam, and Bengal, establishing Sikh temples and community initiatives like langars.
+            </p>
+            <p class="text-lg mb-4">
+                His lifestyle embodied balance—maintaining spiritual discipline while fulfilling his duties as a leader, warrior, and family man. He was deeply committed to social welfare, initiating projects across northern Punjab.
+            </p>
+            <div class="media-container">
+                <!-- Placeholder for an image of Guru Tegh Bahadur Ji traveling -->
+                <img src="/media/guruTeghBahadur.jpg" alt="Guru Tegh Bahadur Ji Traveling" class="w-full max-w-md rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Shabads and Kirtan Section -->
+    <section id="shabads" class="py-12 bg-gray-900">
+        <div class="section-container">
+            <h2 class="section-heading">Shabads & Kirtan</h2>
+            <p class="text-lg mb-4">
+                Guru Tegh Bahadur Ji contributed 116 shabads and 15 ragas to the Guru Granth Sahib, which are recited during Sikh worship. These hymns convey deep spiritual truths and devotion, expressing the soul’s longing for union with the Divine. Below are audio clips of some shabads and kirtan attributed to Guru Ji.
+            </p>
+            <div class="media-container">
+                <!-- Placeholder for an audio clip of a shabad by Guru Tegh Bahadur Ji -->
+                <audio controls class="w-full max-w-md">
+                    <source src="/media/audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="media-container">
+                <!-- Placeholder for another audio clip of kirtan -->
+                <audio controls class="w-full max-w-md">
+                    <source src="/media/audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <p class="text-lg mb-4">
+                These shabads are often sung in Gurdwaras, especially during Shaheedi Diwas, to honor Guru Ji’s legacy.
+            </p>
+        </div>
+    </section>
+
+   
+
+    <!-- EJS Data Injection Example -->
+    <% if (typeof guruData !== 'undefined') { %>
+        <script>
+            console.log('Guru Data:', <%- JSON.stringify(guruData) %> );
+        </script>
+    <% } %>
+</body>
